@@ -21,7 +21,7 @@
 1. 리포지토리를 클론합니다.
 
    \```bash
-   git clone https://github.com/yourusername/number-baseball-game.git
+   git clone https://github.com/ElleryVernon/Bulls-and-Cows.git
    \```
 
 2. `index.html` 파일을 브라우저에서 엽니다.
