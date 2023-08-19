@@ -4,13 +4,11 @@
  * @param {string} answer 정답
  * @return {Object} 스트라이크와 볼의 수
  */
-const countStrikeAndBall = (guess, answer) =>
-	Array.from(guess).reduce(
-		(acc, digit, idx) => ({
-			strike: acc.strike + (digit === answer[idx] ? 1 : 0),
-			ball: acc.ball + (digit !== answer[idx] && answer.includes(digit) ? 1 : 0),
-		}),
-		{ strike: 0, ball: 0 }
-	);
+const countStrikeAndBall = (guess, answer) => {
+	const strike = [...guess].filter((digit, idx) => digit === answer[idx]);
+	const ball = [...guess].filter((digit, idx) => digit !== answer[idx] && answer.includes(digit));
+
+	return { strike: strike.length, ball: ball.length };
+};
 
 export default countStrikeAndBall;
