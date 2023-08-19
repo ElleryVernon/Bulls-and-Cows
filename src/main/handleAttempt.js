@@ -19,10 +19,10 @@ const handleAttempt = (attempts, answer) => {
 	if (strike === 3) {
 		alert(`축하합니다!! 정답은 ${answer}이고, ${attempts}번만에 맞추셨어요!`);
 		return true;
-	} else {
-		alert(`스크라이크: ${strike}번, 볼: ${ball}번`);
-		return false;
 	}
+
+	alert(`스크라이크: ${strike}번, 볼: ${ball}번`);
+	return false;
 };
 
 export default handleAttempt;
